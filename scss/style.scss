@@ -3,9 +3,12 @@ $color--header__active:       #ECF2FF;
 
 $color--header--bg:           #fff;
 $color--header--bg__active:   #213C62;
+$color--form:                 #192D50;
 
 $font-family_headings:        'Montserrat', sans-serif;
 $font-family_body:            'EB Garamond', serif;
+
+$borders:                      1px solid rgba(180,180,180, .3);
 
 body {
   font-family: $font-family_headings;
@@ -40,6 +43,9 @@ header{
     background-color:$color--header--bg__active;
     color: $color--header__active;
 
+    & g#basket_icon{
+      stroke: #fff;
+    }
     & #site-logo {
       color:#fff;
     }
@@ -57,10 +63,19 @@ header{
     margin: 0 auto 1em;
     align-items: baseline;
     padding-bottom:.5em;
-    border-bottom: 1px solid rgba(180,180,180, .3);
+    border-bottom: $borders;
   }
   #site-logo, .breadcrumb, #cart{
     margin: 0;
+  }
+
+  #cart {
+      line-height: 25px;
+
+  &::after{
+    content: "0 SEK";
+    padding-left: 5px;
+  }
   }
 }
 
@@ -82,11 +97,19 @@ header{
   li.nav--search{
     label{display:none;}
     input {
-      background-color:#192D50;
       border:0;
-      line-height:22px;
+      line-height:25px;
       padding:.25em;
       width:100%;
+
+      background-image: url(../assets/icon-search.png);
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-left: 20px;
+      background-position: 5px 50%;
+      background-size: 24px 24px;
+      background-color:$color--form;
+
     }
   }
   .nav--categories {
@@ -149,7 +172,95 @@ header{
   }
 }
 
+footer.colophon{
+  font-size: .8em;
 
+  .cards, .copyright{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    font-family: $font-family_headings;
+    color: #ccc;
+    font-size: 85%;
+    margin-bottom: 1em;
+
+  }
+  .cards {
+      border-top: $borders;
+      padding: 2em;
+  }
+  .cards-img{
+    max-width: 280px;
+  }
+}
+
+#nav-footer {
+  li.footer--navigation, li.signup--footer, li.navigation--colophon{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5em 2em;
+    border-top: $borders;
+
+    ul.nav--footer--children{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+
+
+      .nav--item__langugage{
+        background-image: url('../assets/lang_se.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        background-position: 0px 40%;
+        &::after{
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 5px solid #000;
+          margin-top: 7px;
+          margin-left: 5px;
+          position: absolute;
+        }
+      }
+      &.social{
+        padding: 0 6em;
+      }
+      .nav--item__social {
+        background-image: url('../assets/social_icons.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        width: 37px;
+        height: 35px;
+        background-size:  135px 35px;
+        background-position: 0px 0px;
+        text-indent: -999em;
+        &.pi {
+          background-position: -49px 0px;
+        }
+        &.tw {
+          background-position: -99px 0px;
+        }
+      }
+    }
+
+  }
+  li.navigation--colophon ul{
+    flex-flow: column;
+    text-align: center;
+    li{
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.125em;
+      font-size: 90%;
+      line-height: 185%;
+    }
+  }
+
+}
 
 #feed {
   margin-top: 6em;
@@ -235,3 +346,33 @@ a{
 li, ul, li ul, ul ul {
   list-style-type:none;
 }
+
+  form#signup__form{
+    display: flex;
+    align-items: stretch;
+    margin: 1em;
+    input.email-signup{
+      border:0;
+      line-height:22px;
+      padding:.25em;
+      width:100%;
+      padding: .2em 1em;
+      border: 2px solid $color--header--bg__active;
+      font-family: serif;
+      min-width: 190px;
+      line-height: 28px;
+
+    }
+    input.submit{
+      background-color:$color--header--bg__active;
+      color: $color--header--bg;
+      display: inline;
+      margin: 0; padding: 0;
+      border: 0;
+      border-radius: 0;
+      padding: .6em 1em;
+      text-transform: uppercase;
+      letter-spacing: .125em;
+      font-size: 95%;
+    }
+  }

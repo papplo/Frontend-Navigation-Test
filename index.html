@@ -17,7 +17,19 @@
       <div id='masthead'>
         <h1 id='site-logo'>Etno</h1>
         <p class='breadcrumb'></p>
-        <div id='cart'>Cart</div>
+        <div id='cart'>
+          <?xml version="1.0" ?>
+
+          <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="basket_icon" transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="2">
+                        <path d="M19.4222222,20 L0.577777778,20 C0.266666667,20 0,19.7961019 0,19.5582209 L0,5.65917041 C0,5.42128936 0.266666667,5.2173913 0.577777778,5.2173913 L19.4222222,5.2173913 C19.7333333,5.2173913 20,5.42128936 20,5.65917041 L20,19.5582209 C20,19.7961019 19.7333333,20 19.4222222,20 Z" id="XMLID_1_"></path>
+                        <path d="M4,5.2173913 C4,0 9.5,0 9.5,0 C9.5,0 15,0 15,5.2173913" id="XMLID_7_"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
       </div>
       <ul id='nav'>
         <li class='nav--search hidden'>
@@ -151,23 +163,51 @@
         </li>
       </ul>
     </section>
-    <footer>
-      <p>thanks for watching</p>
 
-      <ul id='nav'>
-        <li class='nav--categories'>
-          <ul class='nav--categories--children'>
-            <li class='nav--item__stores'>Stores</li>
-            <li class='nav--item__login'>Login</li>
-            <li class='nav--item__langugage'>Sweden</li>
+    <footer class='colophon'>
+      <ul id='nav-footer'>
+        <li class='footer--navigation'>
+          <ul class='nav--footer--children'>
+            <li class='nav--item__stores '>Stores</li>
+            <li class='nav--item__login '>Login</li>
+            <li class='nav--item__langugage '>Sweden</li>
+          </ul>
+        </li>
+        <li class="signup--footer">
+          <ul class='nav--footer--children'>
+            <li class='nav--item__signup '>
+              <form id="signup__form">
+                <input class="email-signup" placeholder="Your E-mail"></input>
+                <input type="submit" class="submit" value="Subscribe">
+              </form>
+            </li>
+          </ul>
+          <ul class='nav--footer--children social'>
+            <li class='nav--item__social fb '>Facebook</li>
+            <li class='nav--item__social pi'>Pinterest</li>
+            <li class='nav--item__social tw'>Twitter</li>
+          </ul>
+        </li>
+        <li class="navigation--colophon">
+          <ul class='nav--footer--children'>
+            <li class='nav--item__colophon'>Customer Care</li>
+            <li class='nav--item__colophon'>Press</li>
+            <li class='nav--item__colophon'>Pr Agencies</li>
+            <li class='nav--item__colophon'>Career</li>
+            <li class='nav--item__colophon'>Retailers</li>
           </ul>
         </li>
       </ul>
 
+      <div class="cards">
+        <img class="cards_img" width="240" alt="Accepted payments With Visa, Mastercard, Paypal and American Express" src="assets/accepted_payments.png" />
+      </div>
+      <p class="copyright">2017 Etno &copy; All rights reserved</p>
 
     </footer>
+
   </body>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js '></script>
   <script src="js/index.js"></script>
 
 </html>
