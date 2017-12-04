@@ -69,8 +69,11 @@ header {
   #nav li.nav--search input {
     border: 0;
     line-height: 25px;
-    padding: .25em;
+    padding: .25em .25em .25em;
+    padding-left: 35px !important;
+    font-family: "Montserrat", sans-serif;
     width: 100%;
+    color: #fff;
     background-image: url(../assets/icon-search.png);
     background-position: left center;
     background-repeat: no-repeat;

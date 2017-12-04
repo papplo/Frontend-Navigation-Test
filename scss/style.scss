@@ -99,9 +99,11 @@ header{
     input {
       border:0;
       line-height:25px;
-      padding:.25em;
+      padding:.25em .25em .25em;
+      padding-left:  35px !important;
+      font-family: $font-family_headings;
       width:100%;
-
+      color: $color--header--bg;
       background-image: url(../assets/icon-search.png);
       background-position: left center;
       background-repeat: no-repeat;
