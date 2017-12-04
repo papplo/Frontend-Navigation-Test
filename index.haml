@@ -1,0 +1,52 @@
+!!!5
+%body
+  %header
+    %div#masthead
+      %h1#site-logo Etno
+      %p.breadcrumb
+      #cart Cart
+    %ul#nav
+      %li.nav--search.hidden
+        %label Search for your hearts content
+        %form.site--search
+          %input.input--text
+      %li.nav--categories
+        %ul.nav--categories--children
+          %li.nav--item__shirts Shirts
+          %li.nav--item__accessories Accessories
+          %li.nav--item__our-world Our World
+      %li.nav--sitemap.hidden
+        %ul#sitemap
+          %li.nav--item
+            %label.nav--label Body Fit
+            %ul.nav--item--children
+              %li.nav--item Super Slim
+              %li.nav--item Slim
+              %li.nav--item Contemporary
+              %li.nav--item Classic
+              %li.nav--item Extra Long Sleeve
+          %li.nav--item
+            %label.nav--label Collection
+            %ul.nav--item--children
+              %li.nav--item Red Ribbon
+              %li.nav--item Green Ribbon
+              %li.nav--item Black Ribbon
+          %li.nav--item
+            %label.nav--label.implicate Filters
+            %ul.nav--item--children
+              %li.nav--item All Shirts
+              %li.nav--item New Arrivals
+              %li.nav--item White Shirts
+              %li.nav--item Outlet
+          %li.nav--item
+            %label.nav--label.implicate Help
+            %ul.nav--item--children
+              %li.nav--item Size Guide
+              %li.nav--item Eton Express
+
+  %section#feed
+    %ul.products
+      - (1..10).each do |i|
+        %li #{i}
+  %footer
+    %p thanks for watching
