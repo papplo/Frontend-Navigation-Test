@@ -1,6 +1,18 @@
+body {
+  font-family: "Montserrat", sans-serif; }
+
 footer, #feed {
   max-width: 769px;
   margin: 0 auto; }
+
+body p, body #site-logo {
+  font-family: "EB Garamond", serif;
+  font-size: 19px;
+  font-size-adjust: 0.5; }
+
+#site-logo {
+  letter-spacing: .125em;
+  text-transform: uppercase; }
 
 header {
   position: fixed !important;
@@ -10,7 +22,7 @@ header {
   left: 0;
   padding: 1em;
   background-color: #fff;
-  transition: all 60ms linear; }
+  transition: all 10ms linear; }
   header.state--open {
     background-color: #213C62;
     color: #ECF2FF; }
@@ -31,7 +43,7 @@ header {
         -ms-flex-align: baseline;
             align-items: baseline;
     padding-bottom: .5em;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid rgba(180, 180, 180, 0.3); }
   header #site-logo, header .breadcrumb, header #cart {
     margin: 0; }
 
@@ -63,6 +75,10 @@ header {
     width: 100%;
     margin: 0 auto; }
     #nav .nav--categories ul.nav--categories--children li {
+      font-size: .9em;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: .075em;
       list-style: none; }
   #nav #sitemap {
     display: -webkit-box;
@@ -85,11 +101,11 @@ header {
             align-items: stretch;
     -ms-flex-line-pack: stretch;
         align-content: stretch;
-    max-height: 320px;
+    max-height: 400px;
     margin: 0; }
     #nav #sitemap li.nav--item {
       font-size: 15px;
-      line-height: 145%;
+      line-height: 165%;
       min-width: 150px;
       width: 50%;
       padding: 0;
@@ -97,7 +113,10 @@ header {
       #nav #sitemap li.nav--item label {
         text-transform: uppercase;
         letter-spacing: .0225em;
-        margin: 1em 0 .5em; }
+        margin: 1.5em 0 .5em;
+        font-size: 1.1em;
+        font-weight: 700;
+        color: #fff; }
         #nav #sitemap li.nav--item label.implicate {
           visibility: hidden;
           margin: 1em 0 .5em; }
@@ -136,11 +155,24 @@ ul.products {
         ul.products li figure.top-feature + figcaption {
           margin-bottom: 1em; }
     ul.products li figcaption {
-      font: 1.25em sans-serif;
+      font-size: 1.25em;
+      font-family: "Montserrat", sans-serif;
       font-weight: 700;
       margin: .75em 0 .25em; }
+    ul.products li .price {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      text-align: left;
+      font-size: 1em;
+      text-transform: uppercase; }
+      ul.products li .price span::before {
+        content: "/";
+        padding: 0 .35em; }
     ul.products li:nth-child(n+5) {
-      width: calc(50% - 1em); }
+      width: calc(50% - 1em);
+      font-size: 80%; }
+      ul.products li:nth-child(n+5) figcaption {
+        text-align: left; }
 
 a.button--main {
   padding: .75em 1.25em;
